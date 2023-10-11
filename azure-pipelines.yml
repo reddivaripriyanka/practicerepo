@@ -23,14 +23,14 @@ steps:
   - script: |
       # Plan Terraform changes
       cd TerrafomCode
-      terraform apply -auto-approve -var-file=variables.tfvars
+      terraform plan -var-file=variables.tfvars
 
     displayName: 'Terraform Plan'
 
   - script: |
       # Apply Terraform changes
       cd TerrafomCode
-      terraform apply -auto-approve tfplan
+      terraform apply -auto-approve -var-file=variables.tfvars
 
     displayName: 'Terraform Apply'
 
