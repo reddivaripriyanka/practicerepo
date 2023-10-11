@@ -23,7 +23,7 @@ steps:
   - script: |
       # Plan Terraform changes
       cd TerrafomCode
-      terraform plan -out=tfplan
+      terraform apply -var-file=variables.tfvars
 
     displayName: 'Terraform Plan'
 
