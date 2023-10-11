@@ -7,4 +7,5 @@ variable "resource_group_name" {
 variable "location" {
   type = string
   location = "East US"
+  description="location"
 }
